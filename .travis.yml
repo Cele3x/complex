@@ -14,7 +14,7 @@ after_success:
   - docker build -t cele3x/multi-nginx ./nginx
   - docker build -t cele3x/multi-server ./server
   - docker build -t cele3x/multi-worker ./worker
-  # Log in to the docker CLI
+  # Log in to the docker CLI (using env variables)
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to docker hub
   - docker push cele3x/multi-client
